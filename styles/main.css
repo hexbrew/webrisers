@@ -1,0 +1,234 @@
+:root {
+  --head-font: serif;
+  --body-font: Arial, Helvetica, sans-serif;
+  --link-color: rgb(30,30,30);
+  --tint: rgba(255,255,255, 0.2);
+
+  --header-height: 3rem;
+}
+
+
+/* Presets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+
+  display: grid;
+  grid-template-rows: var(--header-height) minmax(calc(100vh - var(--header-height)), max-content) 3rem;
+
+  font-family: var(--body-font);
+}
+
+/* General Styling */
+
+h1,h2,h3,
+h4,h5,h6,
+p {
+  font-family: var(--head-font);
+  margin: initial;
+  padding: initial;
+}
+
+/* p {
+  font-family: var(--body-font);
+  margin: initial;
+  padding: initial;
+} */
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+
+  font-weight: 400;
+}
+
+/* Main Header */
+
+body > header {
+  display: flex;
+  position: sticky;
+
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.75em;
+}
+
+body > main {
+}
+
+body > footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body > header > section {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0.1em;
+}
+
+.main-nav {
+  position: absolute;
+  background-color: var(--p5);
+
+  display: flex;
+  flex-direction: column;
+  
+  top: 3rem;
+  left: 0;
+  width: 100%;
+  padding-bottom: 5em;
+}
+
+/* CSS-only hamburger */
+body > header > section > *:not(.menu-toggle):not(.faux-menu-checkbox) {
+  display: none;
+}
+
+.faux-menu-checkbox {
+  height: 100%;
+
+  width: 1.5em;
+  left: -1.5em;
+  position: relative;
+  display: initial;
+
+  user-select: none;
+  pointer-events: none;
+  /* background: red; */
+}
+
+.faux-menu-checkbox:after {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  content: '\2261';
+  /* font-size: 1em; */
+  
+  top: 50%;
+  left: 0;
+  line-height: 0;
+  transform: scale(1.55) scaleX(1.75);
+
+  font-weight: 500;
+}
+
+.menu-toggle:checked ~ .faux-menu-checkbox:after {
+  content: '\2715';
+  transform: scale(1.5);
+}
+
+.menu-toggle {
+  cursor: pointer;
+  
+  height: 1.5em;
+  width: 1.5em;
+  opacity: 0;
+}
+
+.menu-toggle:checked ~ .main-nav {
+  display: flex;
+}
+
+header a.logo {
+  display: flex;
+  font-size: 1.25em;
+  align-items: flex-end;
+
+  text-transform: uppercase;
+}
+
+header a.logo h1 {
+  font-size: inherit;
+  font-weight: 400;
+
+  margin: 0;
+  padding: 0;
+  margin-left: 0.15em;
+}
+
+.main-nav > a {
+  position: relative;
+  
+  width: 100%;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+
+  padding: 1em;
+  border-left: 0.3em solid transparent;
+}
+
+.main-nav > a.active {
+  border-left: 0.3em solid red;
+}
+
+.main-nav > a:hover {
+  border-left: 0.3em solid lightcoral;
+  background-color: var(--tint);
+}
+
+.main-nav > a:after {
+  position: relative;
+  left: 0.2em;
+  content:"\FE65";
+  font-size: 1em;
+}
+
+@media only screen and (min-width: 980px) {
+
+  :root {
+    --header-height: 4rem;
+  }
+
+  .main-nav {
+    position: static;
+
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 0;
+  }
+
+  .main-nav > a {
+    white-space: nowrap;
+    border-left: none;
+  }
+
+  .main-nav > a:hover {
+    border-left: none;
+  }
+  .main-nav > a:after {
+    content: '';
+  }
+
+  .menu-toggle:checked ~ .main-nav {
+    display: flex;
+  }
+
+  body > header > section > *:not(.menu-toggle):not(.faux-menu-checkbox) {
+    display: flex;
+  }
+
+  .menu-toggle, .faux-menu-checkbox {
+    display: none;
+  }
+}
+
+/* restyle page based on defined variables per light/dark 
+disabled while styling light theme
+*/
+
+/* @media only screen and (prefers-color-scheme: dark) {
+  :root {
+    --tint: rgba(0,0,0,0.15);
+  }
+} */
