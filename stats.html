@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Moonrisers</title>
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/stats.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js" integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
+  <script type='module' src='./scripts/app.js'></script>
+  <script type='module' src='./scripts/stats.js'></script>
+</head>
+<body>
+  <!-- ========= HEADER ========= -->
+  <header>
+    <a class='logo' href='./'><div class='icon moonrisers'></div><h1>MOONRISERS</h1></a>
+    <nav>
+      <a href="./team.html">Team</a>
+      <a href="mailto:hello@hexbrew.com">Contact</a>
+      <a class='sign-in' href="#">Stats</a>
+    </nav>
+  </header>
+
+  <!-- ========= MAIN ========= -->
+  <main>
+      <h1>Statistics</h1>
+      <h2>Overall</h2>
+      <section class="total">
+          <canvas id="gamesChart" width="400" height="100"></canvas>
+      </section>
+
+      <h2>Last Game</h2>
+      <section class="lastGame">
+          <canvas id="lastGameChart" width="400" height="100"></canvas>
+      </section>
+  </main>
+
+  <!-- ========= FOOTER ========= -->
+  <footer>
+      <div class='moonrisers-block'>
+      </div>
+      <p class='copyright'>© 2019 HexBrew.</p>
+      <nav>
+        <h2>General</h2>
+        <a href='https://hexbrew.uqcloud.net/purchase'>Purchase</a>
+        <a href='https://hexbrew.uqcloud.net/stats'>Other Stats</a>
+      </nav>
+      <nav>
+        <h2>Legal</h2>
+          <a href='https://hexbrew.uqcloud.net/privacy/'>Privacy</a>
+          <a href='mailto:hello@hexbrew.com'>Contact Us</a>
+      </nav>
+    </footer>
+</body>
+</html>

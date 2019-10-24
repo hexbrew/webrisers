@@ -1,0 +1,103 @@
+#team {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2em;
+  row-gap: 5em;
+  margin: 4em 0.5em 0;
+}
+
+#team .member {
+  height: 100%;
+  max-width: 20em;
+  margin: auto;
+}
+
+#team img.profile {    
+  display: block;
+  height: 14rem;
+  width: auto;
+  max-width: 14rem;
+  margin: 0 auto;
+  
+  border-radius: 50%;
+}
+
+#team .member .name {
+  position: relative;
+  text-align: center;
+  font-family: var(--head-font);
+  font-size: 2em;
+}
+
+#team .member .name::after {
+  display: block;
+  content: "";
+  border-bottom: 2px solid black;
+  width: 4em;
+  margin: 0 auto;
+}
+
+#team .member > h3 {
+  font-family: var(--para-font);
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+#team .member p {
+  font-family: var(--para-font);
+  font-size: 1.1em;
+}
+
+#team .member .skills {
+  font-family: var(--header-font);
+  padding-left: 1em;
+  margin-top: 1.5em;
+}
+
+#team .member .social {
+  display: flex;
+  padding-top: 0.5rem;
+  font-size: 1.25em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
+  transition: max-width 0.25s ease, padding 0.25s ease;
+  margin-bottom: 1em;
+}
+#team .member .social a {
+  font-size: 1.25em;
+}
+#team .member .social a:not(:first-of-type) {
+  margin-left: 0.25em;
+}
+
+#team .icon {
+  width: 1.25em;
+  height: 1.25em;
+  background-color: rgba(10,10,10);
+  opacity: 1;
+}
+
+div.team {
+  display: flex;
+
+  align-items: flex-end;
+  border-bottom: 0.125em solid black;
+}
+
+h1.team {
+  font-size: 3rem;
+  
+  line-height: 1em;
+}
+
+.team.hexbrew-logo {
+  height: 3rem;
+  padding: 0;
+  padding-bottom: 0.3em;
+}

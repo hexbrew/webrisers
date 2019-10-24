@@ -4,38 +4,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>MoonRisers</title>
-  <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/index.css">
-  <link rel="stylesheet" href="styles/test.css">
+  <title>Moonrisers</title>
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="shortcut icon" href="./assets/images/favicon_white_darkbg.ico" type="image/x-icon">
+  <script type='module' src='./scripts/app.js'></script>
 </head>
 <body>
+  <!-- ========= HEADER ========= -->
   <header>
-    <a href='#' class='logo'>🌒<h1>MoonRisers</h1></a>
-    <section>
-      <input type='checkbox' class='menu-toggle'>
-      <div class='faux-menu-checkbox'></div>
-      <nav class='main-nav'>
-          <a href='#'>Sign In</a>
-          <a href='#'>About</a>
-          <a href='#'>Social</a>
-          <a href='#'>Team</a>
-          <a href='#'>Contact</a>
-          <!-- <ul>
-              <li><a href='#'>Sign In</a></li>
-              <li><a href='#'>About</a></li>
-              <li><a href='#'>Social</a></li>
-              <li><a href='#'>Team</a></li>
-              <li><a href='#'>Contact</a></li>
-          </ul> -->
-      </nav>
-    </section>
+    <a class='logo' href='#'><div class='icon moonrisers'></div><h1>MOONRISERS</h1></a>
+    <nav>
+      <a href="./team.html">Team</a>
+      <a href="mailto:hello@hexbrew.com">Contact</a>
+      <a class='sign-in' href="./stats.html">Stats</a>
+    </nav>
   </header>
-  <main></main>
+
+  <!-- ========= MAIN ========= -->
+  <main>
+    <h1>Moonrisers</h1>
+    <section class="about">
+        <iframe id='intro-vid' style="width:100%;height:100%;" src="https://www.youtube-nocookie.com/embed/NeIMYJYGf4Q?rel=0?version=3&autoplay=0&controls=1&showinfo=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <blockquote class="intro">
+          You and three other astroscientists are exploring a new planet when you awaken
+          an ancient horror beneath the planet's surface. With your shuttle destroyed, you
+          have no choice but to build upward to the moon while evading the creature's clutches
+          and its mysterious mind-controlling abilities.
+        </blockquote>
+        <p>
+          Moonrisers is couch co-op 2D platformer where players need to build their way to the moon! Each player is
+          equipped with a gamepad controller, a tool they may lose if they die.
+        </p>
+        <p>
+          One unlucky player must use a tablet device. This player has only one goal. Kill
+          the other Moonrisers. If they succeed, they take their place as a builder, and the fallen must now use the tablet.
+        </p>
+        <p>
+          Be the first to reach the moon. If you do, you have an option to leave, or try bring your friends with you.
+          Which will you decide?
+        </p>
+    </section>
+  </main>
+
+  <!-- ========= FOOTER ========= -->
   <footer>
-    <nav class='social'></nav>
-    &#169 2019 HexBrew
-    <nav></nav>
+    <div class='moonrisers-block'>
+    </div>
+    <p class='copyright'>© 2019 HexBrew.</p>
+    <nav>
+      <h2>General</h2>
+      <a href='https://hexbrew.uqcloud.net/purchase'>Purchase</a>
+      <a href='https://hexbrew.uqcloud.net/stats'>Other Stats</a>
+    </nav>
+    <nav>
+      <h2>Legal</h2>
+        <a href='https://hexbrew.uqcloud.net/privacy/'>Privacy</a>
+        <a href='mailto:hello@hexbrew.com'>Contact Us</a>
+    </nav>
   </footer>
 </body>
 </html>

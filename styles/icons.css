@@ -1,0 +1,45 @@
+.icon {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 50% 50%;
+  mask-repeat: no-repeat;
+  mask-position: 50% 50%;
+  filter: drop-shadow(16px 16px 10px black);
+  
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  
+  transform-origin: center center;
+  transition: transform 0.1s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.linkedin {
+  -webkit-mask-image:  url(../assets/images/icons/linked-in.svg);
+  mask-image: url(../assets/images/icons/linked-in.svg);
+}
+
+.spotify {
+  -webkit-mask-image:  url(../assets/images/icons/spotify.svg);
+  mask-image: url(../assets/images/icons/spotify.svg);
+}
+
+.github {
+  -webkit-mask-image:  url(../assets/images/icons/github-alt.svg);
+  mask-image: url(../assets/images/icons/github-alt.svg);
+}
+
+.envelope {
+  -webkit-mask-image:  url(../assets/images/icons/mail.svg);
+  mask-image: url(../assets/images/icons/mail.svg);
+}
+
+.moonrisers {
+  -webkit-mask-image:  url(../assets/images/moonrisers_bw.svg);
+  mask-image: url(../assets/images/moonrisers_bw.svg);
+}
